@@ -5,4 +5,4 @@ before_install:
   - unzip -d /home/travis/ghidra ghidra_9.1.1_PUBLIC_20191218.zip
 
 script: 
-- gradle build -PGHIDRA_INSTALL_DIR=/home/travis/ghidra/ghidra_9.1.1_PUBLIC
+- gradle -PGHIDRA_INSTALL_DIR=/home/travis/ghidra/ghidra_9.1.1_PUBLIC build
