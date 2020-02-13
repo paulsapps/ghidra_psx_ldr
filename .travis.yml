@@ -1,4 +1,8 @@
 language: java
 
+before_install:
+  - wget https://ghidra-sre.org/ghidra_9.1.1_PUBLIC_20191218.zip
+  - unzip ghidra_9.1.1_PUBLIC_20191218.zip /home/travis/ghidra
+
 script: 
-- gradle build
+- gradle build -PGHIDRA_INSTALL_DIR=/home/travis/ghidra
